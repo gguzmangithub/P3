@@ -2,12 +2,18 @@
 <html>
 <head>
     <title>
-        {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
         @yield('title','Developers Best Friend')
     </title>
 
     <meta charset='utf-8'>
-    <link href="/css/generator.css" type='text/css' rel='stylesheet'>
+    <link href="/css/p3.css" type='text/css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css' rel='stylesheet'>
+
+    <meta charset='utf-8'>
+
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
@@ -20,11 +26,17 @@
         style='width:300px'
         alt='RCG Logo'>
     </header>
-
+<nav>
+  <ul>
+    <li><a href='/'>Home</a></li>
+    <li><a href='/generator'>Lorem Ipsum Paragrahs Generator</a></li>
+    <li><a href='/randomuser'>Random User Generator</a></li>
+  </ul>
+</nav>
      <section>
         {{-- Main page content will be yielded here --}}
         @yield('content')
-    </section> 
+    </section>
 
     <footer>
         &copy; {{ date('Y') }}

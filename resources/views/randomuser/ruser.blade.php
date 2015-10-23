@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Code Generator
+    Random User Generator
 @stop
 
 
@@ -16,13 +16,11 @@ such as a page specific styesheets.
 @stop
 
 @section('content')
-    <h1>Lorem Ipsum Paragraph Generator</h1>
-<form method='POST' action='/generator'>
-
+    <h1>Random User Generator</h1>
+<form method='POST' action='/randomuser'>
   <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 
-      Number of Paragraphs: <input type='text' name='number_of_paragraphs' value={{old('number_of_paragraphs')}}>
-      {{-- Number of Paragraphs: <input type='text' name='number_of_paragraphs'> --}}
+      Number of Users: <input type='text' name='number_of_users' value={{old('number_of_users')}}>
 
       @if(count($errors) > 0)
           <ul>
@@ -32,8 +30,9 @@ such as a page specific styesheets.
           </ul>
       @endif
 
-  <input type='submit' value='Display paragraphs'>
+  <input type='submit' value='Display users and addresses'>
 </form>
+
 
 @stop
 

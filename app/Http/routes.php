@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('/generator','GeneratorController@getIndex');
 Route::post('/generator','GeneratorController@postIndex');
+Route::get('/randomuser','RandomUserController@getIndex');
+Route::post('/randomuser','RandomUserController@postIndex');

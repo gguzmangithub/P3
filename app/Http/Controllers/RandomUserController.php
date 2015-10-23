@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class GeneratorController extends Controller
+class RandomUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,19 +15,20 @@ class GeneratorController extends Controller
      */
     public function getIndex()
     {
-        return view('generator.index');
+        return view('randomuser.ruser');
     }
 
 
     public function postIndex(Request $request)
     {
        $this->validate($request, [
-        'number_of_paragraphs' => ('required|numeric|min:1|max:20'),
+        'number_of_users' => ('required|numeric|min:1|max:20'),
         ]);
-        $number = $request->input('number_of_paragraphs');
-       $generator = new \Badcow\LoremIpsum\Generator();
-       $paragraphs = $generator->getParagraphs($number);
-       echo implode('<p>', $paragraphs);
+        $number = $request->input('number_of_users');
+        $faker = \Faker\Factory::create();
+        for ($i=0; $i < $number; $i++) {
+        echo $faker->name." - Address: ".$faker->address,'<br>';
+         }
       }
     /**
      * Display the specified resource.
@@ -35,8 +36,8 @@ class GeneratorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($paragraphs)
+    public function show($faker)
     {
-  return view('generator.index')->with('number_of_paragraphs',$paragraphs);
+ return view('randomuser.ruser')->with('number_of_users',$faker);
       }
 }

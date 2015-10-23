@@ -1,45 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title')
+    Welcome to Developer's Best Friend
+@stop
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('head')
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+@stop
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+@section('content')
+    <h1>Welcome to Developer's Best Friend</h1>
+    <p> This app contains a Lorem Ipsum Generator and a Random User Generator.
+        Please use the navigation buttons to get to the different routines.</p>
+@stop
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+@section('body')
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+@stop

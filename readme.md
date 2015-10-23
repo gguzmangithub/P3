@@ -1,3 +1,24 @@
+# Germans Developers Best Fried
+
+## Live URL
+<http://p3.gguzman.me>
+
+##Description
+This web appocation contains a Lorem Ipsum Generator and a Random User Generator.
+
+## Details for the teaching team
+There is no login required for this app.
+I used badcow/lorem-ipsum for the paragraph generator: <https://packagist.org/packages/badcow/lorem-ipsum>
+I used fzaninotto/fager for the user generator: <https://packagist.org/packages/fzaninotto/faker>
+
+##Demo
+<http://screencast.com/t/A31Cebn8q1p>
+
+## Outside Code
+badcow/lorem-ipsum: <https://packagist.org/packages/badcow/lorem-ipsum>
+fzaninotto/fager: <https://packagist.org/packages/fzaninotto/faker>
+bootstrap: <https://www.bootstrapcdn.com/>
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
