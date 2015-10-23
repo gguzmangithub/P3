@@ -1,4 +1,4 @@
-# Germans Developers Best Fried
+# Germans Developers Best Friend
 
 ## Live URL
 <http://p3.gguzman.me>
